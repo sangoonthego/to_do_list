@@ -18,6 +18,22 @@ function renderTodos() {
   });
 }
 
+document.getElementById('add-button').addEventListener('click', addTask);
+
+function addTask() {
+  const input = document.getElementById('todo-input');
+  const taskText = input.value.trim();
+  if (taskText !== "") {
+    const li = document.createElement('li');
+    li.textContent = taskText;
+    li.addEventListener('click', () => {
+      li.classList.toggle('done');
+    });
+    document.getElementById('todo-list').appendChild(li);
+    input.value = "";
+  }
+}
+
 // save at localStorage
 function saveTodos() {
   localStorage.setItem("todos", JSON.stringify(todos));
