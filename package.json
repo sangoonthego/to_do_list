@@ -1,0 +1,12 @@
+{
+  "name": "to-do-list",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+  "scss": "sass scss/style.scss css/style.css --watch"
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
